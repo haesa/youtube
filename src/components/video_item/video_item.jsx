@@ -1,14 +1,24 @@
 import React from 'react';
+import styles from './video_item.module.css';
 
-const VideoItem = ({ key, imgSrc, title, channelTitle }) => {
+const VideoItem = ({ key, snippet }) => {
+  const {
+    title,
+    channelTitle,
+    thumbnails: {
+      medium: { url: imgSrc },
+    },
+  } = snippet;
+
   return (
-    <li key={key}>
-      <img src={imgSrc} alt="thumbnail" />
-      <p>{title}</p>
-      <span>{channelTitle}</span>
+    <li className={styles.video} key={key}>
+      <img className={styles.thumbnail} src={imgSrc} alt="thumbnail" />
+      <div className={styles.metadata}>
+        <p className={styles.title}>{title}</p>
+        <p className={styles.channel}>{channelTitle}</p>
+      </div>
     </li>
   );
 };
 
 export default VideoItem;
-// id, src, title, channelTitle
