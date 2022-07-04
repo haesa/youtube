@@ -14,7 +14,7 @@ li {
 }
 
 /* layout */
-.main {
-  margin: auto;
-  width: 1600px;
+.app {
+  /* margin: auto; */
+  width: 80rem;
 }
