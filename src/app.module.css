@@ -1,20 +1,15 @@
-/* init */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-li {
-  list-style-type: none;
-}
-
-/* layout */
 .app {
-  /* margin: auto; */
-  width: 80rem;
+  width: 90rem;
+}
+
+.content {
+  display: flex;
+}
+
+.detail {
+  flex: 1 1 70%;
+}
+
+.list {
+  flex: 1 1 30%;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './video_item.module.css';
 
-const VideoItem = ({ key, snippet }) => {
+const VideoItem = ({ video, snippet, onVideoClick }) => {
   const {
     title,
     channelTitle,
@@ -11,7 +11,7 @@ const VideoItem = ({ key, snippet }) => {
   } = snippet;
 
   return (
-    <li className={styles.video} key={key}>
+    <li className={styles.video} onClick={() => onVideoClick(video)}>
       <img className={styles.thumbnail} src={imgSrc} alt="thumbnail" />
       <div className={styles.metadata}>
         <p className={styles.title}>{title}</p>
