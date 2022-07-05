@@ -1,9 +1,11 @@
 .video {
   display: flex;
   align-items: center;
-  box-shadow: 8px 8px 13px -12px #000000;
+  padding-right: 1em;
+  box-shadow: 3px 3px 5px 0px rgba(191, 191, 191, 0.53);
   cursor: pointer;
   transition: transform 250ms ease-in;
+  background-color: white;
 }
 
 .video:hover {
@@ -24,6 +26,13 @@
 .channel {
   margin: 0;
   font-size: 1rem;
+}
+
+.title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .channel {
