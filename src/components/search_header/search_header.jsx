@@ -10,25 +10,34 @@ const SearchHeader = memo(({ onSearch }) => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
-        <img className={styles.logoImg} src="/images/logo.png" alt="logo" />
-        <h1 className={styles.title}>Youtube</h1>
+      <div className={styles.start}>
+        <button className={styles.bar}>
+          <i className="fa-solid fa-bars"></i>
+        </button>
+        <a href="." className={styles.logo}>
+          <img className={styles.logoImg} src="/images/logo.png" alt="logo" />
+          <h1 className={styles.title}>YouTube</h1>
+        </a>
       </div>
-      <form className={styles.search} onSubmit={handleSearch}>
+      <form className={styles.center} onSubmit={handleSearch}>
         <input
           ref={inputRef}
           className={styles.input}
           type="search"
-          placeholder="Search..."
+          placeholder="검색"
         />
         <button className={styles.button}>
-          <img
-            className={styles.buttonImg}
-            src="/images/search.png"
-            alt="search"
-          />
+          <i className="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
+      <div className={styles.end}>
+        <button className={styles.login}>
+          <span className={styles.icon}>
+            <i className="fa-solid fa-user"></i>
+          </span>
+          <span>로그인</span>
+        </button>
+      </div>
     </header>
   );
 });

@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './app';
-// import Youtube from './service/youtube';
 import YoutubeFetch from './service/youtube-fetch';
-import axios from 'axios';
+import '@fortawesome/fontawesome-free/js/all.js';
+// import Youtube from './service/youtube';
 
 // const httpClient = axios.create({
 //   baseURL: 'https://www.googleapis.com/youtube/v3',
